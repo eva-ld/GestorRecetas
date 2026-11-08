@@ -1,3 +1,5 @@
+package GestorRecetas;
+
 import java.io.Serializable;
 
 public class Receta implements Serializable {
@@ -5,11 +7,11 @@ public class Receta implements Serializable {
     private final int id;
     private final String nombre;
     private int tiempoPreparacion;
-    private  String Categoria;
+    private  String categoria;
 
     public Receta(int tiempoPreparacion, String categoria, String nombre, int id) {
         this.tiempoPreparacion = tiempoPreparacion;
-        Categoria = categoria;
+        this.categoria = categoria;
         this.nombre = nombre;
         this.id = id;
     }
@@ -31,20 +33,20 @@ public class Receta implements Serializable {
     }
 
     public String getCategoria() {
-        return Categoria;
+        return categoria;
     }
 
     public void setCategoria(String categoria) {
-        Categoria = categoria;
+        categoria = categoria;
     }
 
 
     @Override
     public String toString() {
-        return "La receta con nombre" + nombre + '\'' +
-                "y cuyo id es  " + id +
-                ",tiene un tiempo de preparacion=" + tiempoPreparacion +
-                ", y pertemece a la categoria= '" + Categoria + "'";
+        return "La receta con nombre " + nombre +
+                " y cuyo id es " + id +
+                ", tiene un tiempo de preparación de " + tiempoPreparacion +
+                " minutos, y su categoría correspondiente es: " + categoria ;
     }
 
 }
